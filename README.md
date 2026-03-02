@@ -6,18 +6,16 @@ tippitytappity is a program to practice typing
 ## Data model
 
 ```mermaid
-classDiagram
-  ExampleParent <|-- ExampleChild
-  class ExampleParent{
-        - name: string
-        - email: string
-        - password: string
-        + login(user: string, pass: string) boolean
-        + get_email() string
+TippityTappity
+  Typing_Accuracy <|-- Typing_Speed
+  class Typing_Accuracy{
+        - Letters: string
+        - Numbers: integer
+        - Symbols: string
   }
-  class ExampleChild{
-        - badges vector~string~
-        + add_badge(title: string)
-        + get_badges() vector~string~
+  class Typing_Speed{
+        - wpm vector~integer~
+        + add_wpm(title: string)
+        + get_wpm() vector~integer~
   }
 ```
