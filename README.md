@@ -15,17 +15,17 @@ classDiagram
         + tpyingAccuracy(wpm: integer) boolean
         + get_wpm() integer
   }
-  TypingSpeed{
+  class TypingSpeed{
         - wpm vector~integer~
         + add_wpm(title: string)
         + get_wpm() vector~integer~
   }
-  TypingHistory{
+  class TypingHistory{
         - Accuracy: string
         - Speed: integer
         + get_results(Accuracy: string, Speed: integer) booleana
   }
-  Montitor{
+  class Montitor{
         - Users: string
         - History: string
         - Progress: string
