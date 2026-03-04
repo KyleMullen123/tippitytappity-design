@@ -7,7 +7,10 @@ tippitytappity is a program to practice typing
 
 ```mermaid
 classDiagram
-  TypingAccuracy <|-- TypingSpeed <|-- TypingHistory <|-- Montitor
+  TypingAccuracy <|--
+  TypingSpeed <|--
+  TypingHistory <|--
+  Montitor
   class TypingAccuracy{
         - Letters: string
         - Numbers: integer
