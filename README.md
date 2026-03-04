@@ -7,15 +7,15 @@ tippitytappity is a program to practice typing
 
 ```mermaid
 TippityTappity
-  ExampleParent <|-- ExampleChild
-  class ExampleParent{
+  TypingAccuracy <|-- TypingSpeed
+  class TypingAccuracy{
         - Letters: string
         - Numbers: integer
         - Symbols: string
         + tpyingAccuracy(wpm: integer) boolean
         + get_wpm() integer
   }
-  class ExampleChild{
+  class TypingSpeed{
         - wpm vector~integer~
         + add_wpm(title: string)
         + get_wpm() vector~integer~
