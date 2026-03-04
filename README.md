@@ -6,7 +6,7 @@ tippitytappity is a program to practice typing
 ## Data model
 
 ```mermaid
-TippityTappity
+classDiagram
   TypingAccuracy <|-- TypingSpeed <|-- TypingHistory <|-- Montitor
   class TypingAccuracy{
         - Letters: string
