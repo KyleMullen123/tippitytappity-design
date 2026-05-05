@@ -7,28 +7,26 @@ tippitytappity is a program to practice typing
 
 ```mermaid
 classDiagram
-  TypingAccuracy <|-- Extension TypingSpeed <|-- Extension TypingHistory <|-- Extension Montitor
-  class TypingAccuracy{
-        - Letters: string
-        - Numbers: integer
-        - Symbols: string
-        + tpyingAccuracy(wpm: integer) boolean
-        + get_wpm() integer
-  }
-  class TypingSpeed{
-        - wpm vector~integer~
-        + add_wpm(title: string)
-        + get_wpm() vector~integer~
-  }
-  class TypingHistory{
-        - Accuracy: string
-        - Speed: integer
-        + get_results(Accuracy: string, Speed: integer) booleana
-  }
-  class Montitor{
-        - Users: string
-        - History: string
-        - Progress: string
-        + get_history(Users: string, History: string, Progress: string) boolean
-  }
+  ` User <|-- Ask_page
+    note for User "can ask questions to mechanics"
+    User <|-- Home_page
+    User <|-- Login_page
+    User  : +String name
+    User  : +String question
+    User  : +isvalid()
+    User  : +answers()
+    class Ask_page{
+        +String question
+        +ask()
+        +answer()
+    }
+    class Login_page{
+        -String user()
+        -String password()
+        -canLogin()
+    }
+    class Home_page{
+        +bool is_login
+        +home()
+    }
 ```
